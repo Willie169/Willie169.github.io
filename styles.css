@@ -5,6 +5,7 @@ body {
 	color: #333;
 	padding: 0;
 	margin: 0;
+    overflow: auto;
 }
 
 *, *::before, *::after {
@@ -91,23 +92,6 @@ a {
 
 a:hover {
 	text-decoration: underline;
-}
-
-footer {
-	background-color: #333;
-	color: white;
-	text-align: center;
-	padding: 10px;
-	margin-top: 40px;
-	position: fixed;
-    width:100%;
-    overflow: auto;
-	bottom: 0;
-}
-
-footer p {
-	margin: 0;
-	font-size: 0.9rem;
 }
 
 ul,
