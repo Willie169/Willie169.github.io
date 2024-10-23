@@ -9,11 +9,8 @@
 <script src="script.js" defer></script>
 </head>
 <body>
-<div class="sidebar">
-<img src="path/to/logo.png" alt="Logo" style="height: 40px;">
-</div>
 <div class="navbar">
-<img src="path/to/logo.png" alt="Logo" style="height: 40px;">
+<img src="img/willie169.jpeg" alt="Logo" style="height: 40px;">
 </div>
 <div class="content">
 <h1>Android-Non-Root</h1>
@@ -1258,23 +1255,27 @@ It is recommended to enable NoScript for all Tor sites unless you fully trust it
 </ul>
 <h3>Symmetric Encryption</h3>
 <h4>Introduction of Symmetric Encryption</h4>
-<p>Symmetric encryption uses the same key for both encryption and decryption, requiring both parties to possess and keep the key confidential.
-1. <strong>Single Key</strong>: Both parties use the same key, making key management critical. If the key is compromised, the encrypted data is at risk.
-2. <strong>Speed</strong>: Symmetric algorithms are faster than asymmetric ones, making them ideal for encrypting large amounts of data, particularly in real-time applications.
-3. <strong>Confidentiality</strong>: Only authorized parties with the correct key can decrypt the data, maintaining its confidentiality.
-4. <strong>Common Algorithms</strong>:
-   - <strong>AES</strong>: Secure and efficient, with key sizes of 128, 192, or 256 bits.
-   - <strong>DES</strong>: Uses a 56-bit key; now considered insecure.
-   - <strong>3DES</strong>: Applies DES three times with different keys but slower than AES.
-   - <strong>Blowfish</strong>: A fast cipher with key lengths of 32 to 448 bits.
-   - <strong>Twofish</strong>: A more advanced version of Blowfish, supporting keys up to 256 bits.
-   - <strong>RC4</strong>: A stream cipher known for speed but now insecure in many uses.
-5. <strong>Applications</strong>:
-   - <strong>Data Encryption</strong>: Secures data in storage and transmission (e.g., SSL/TLS).
-   - <strong>VPNs</strong>: Encrypts data over public networks to protect privacy.
-   - <strong>Disk Encryption</strong>: Protects data on devices, ensuring confidentiality if lost or stolen.
-   - <strong>Secure Communications</strong>: Used in messaging apps and secure protocols.
-   - <strong>Cloud Storage Security</strong>: Encrypts data in the cloud, protecting it from unauthorized access.</p>
+<p>Symmetric encryption uses the same key for both encryption and decryption, requiring both parties to possess and keep the key confidential.</p>
+<ol>
+<li><strong>Single Key</strong>: Both parties use the same key, making key management critical. If the key is compromised, the encrypted data is at risk.</li>
+<li><strong>Speed</strong>: Symmetric algorithms are faster than asymmetric ones, making them ideal for encrypting large amounts of data, particularly in real-time applications.</li>
+<li><strong>Confidentiality</strong>: Only authorized parties with the correct key can decrypt the data, maintaining its confidentiality.</li>
+<li><strong>Common Algorithms</strong>:
+<ul>
+<li><strong>AES</strong>: Secure and efficient, with key sizes of 128, 192, or 256 bits.</li>
+<li><strong>DES</strong>: Uses a 56-bit key; now considered insecure.</li>
+<li><strong>3DES</strong>: Applies DES three times with different keys but slower than AES.</li>
+<li><strong>Blowfish</strong>: A fast cipher with key lengths of 32 to 448 bits.</li>
+<li><strong>Twofish</strong>: A more advanced version of Blowfish, supporting keys up to 256 bits.</li>
+<li><strong>RC4</strong>: A stream cipher known for speed but now insecure in many uses.</li>
+<li><strong>Applications</strong>:</li>
+<li><strong>Data Encryption</strong>: Secures data in storage and transmission (e.g., SSL/TLS).</li>
+<li><strong>VPNs</strong>: Encrypts data over public networks to protect privacy.</li>
+<li><strong>Disk Encryption</strong>: Protects data on devices, ensuring confidentiality if lost or stolen.</li>
+<li><strong>Secure Communications</strong>: Used in messaging apps and secure protocols.</li>
+<li><strong>Cloud Storage Security</strong>: Encrypts data in the cloud, protecting it from unauthorized access.</li>
+</ul></li>
+</ol>
 <h4>AES-256-CBC Encryption</h4>
 <p><code>openssl enc -aes-256-cbc -in file.rar -out encfile.rar -pass pass:1234567890123456789012345678901234567890123456789012345678901234 -base64 -iv 12345678901234567890123456789012 -S 1234567890123456 -md sha-256 -iter 2048 -pbkdf2 -p</code></p>
 <h4>AES-256-CBC Decryption</h4>
@@ -1282,180 +1283,185 @@ It is recommended to enable NoScript for all Tor sites unless you fully trust it
 <h4>All Command Options of Enc / Cipher</h4>
 <p><code>openssl enc|cipher [-cipher] [-help] [-list] [-ciphers] [-in filename] [-out filename] [-pass arg] [-e] [-d] [-a] [-base64] [-A] [-k password] [-kfile filename] [-K key] [-iv IV] [-S salt] [-salt] [-nosalt] [-z] [-md digest] [-iter count] [-pbkdf2] [-saltlen size] [-p] [-P] [-bufsize number] [-nopad] [-v] [-debug] [-none] [-engine id] [-rand files] [-writerand file] [-provider name] [-provider-path path] [-propquery propq]</code>
 <strong>DESCRIPTION</strong>: The symmetric cipher commands allow data to be encrypted or decrypted using various block and stream ciphers using keys based on passwords or explicitly provided. Base64 encoding or decoding can also be performed either by itself or in addition to the encryption or decryption.<br>
-<strong>OPTIONS</strong>:
--help: Print out a usage message.
-- -list: List all supported ciphers.
-- -ciphers: Alias of -list to display all supported ciphers.
-- -in filename: The input filename, standard input by default.
-- -out filename: The output filename, standard output by default.
-- -pass arg: The password source. For more information about the format of arg see "Pass Phrase Options" in openssl(1).
-- -e: Encrypt the input data: this is the default.
-- -d: Decrypt the input data.
-- -a: Base64 process the data. This means that if encryption is taking place the data is base64 encoded after encryption. If decryption is set then the input data is base64 decoded before being decrypted.
-- -base64: Same as -a
-- -A: If the -a option is set then base64 process the data on one line.
-- -k password: The password to derive the key from. This is for compatibility with previous versions of OpenSSL. Superseded by the -pass argument.
-- -kfile filename: Read the password to derive the key from the first line of filename. This is for compatibility with previous versions of OpenSSL. Superseded by the -pass argument.
-- -md digest: Use the specified digest to create the key from the passphrase. The default algorithm is sha-256.
-- -iter count: Use a given number of iterations on the password in deriving the encryption key. High values increase the time required to brute-force the resulting file. This option enables the use of PBKDF2 algorithm to derive the key.
-- -pbkdf2: Use PBKDF2 algorithm with a default iteration count of 10000 unless otherwise specified by the -iter command line option.
-- -saltlen: Set the salt length to use when using the -pbkdf2 option. For compatibility reasons, the default is 8 bytes. The maximum value is currently 16 bytes. If the -pbkdf2 option is not used, then this option is ignored and a fixed salt length of 8 is used. The salt length used when encrypting must also be used when decrypting.
-- -nosalt: Don't use a salt in the key derivation routines. This option SHOULD NOT be used except for test purposes or compatibility with ancient versions of OpenSSL.
-- -z: Compress or decompress encrypted data using zlib after encryption or before decryption. This option exists only if OpenSSL was compiled with the zlib or zlib-dynamic option.
-- -none: Use NULL cipher (no encryption or decryption of input).
-- -rand files, -writerand file: See "Random State Options" in openssl(1) for details.
-- -provider name: -provider-path path: -propquery propq: See "Provider Options" in openssl(1), provider(7), and property(7).
-- -engine id: See "Engine Options" in openssl(1). This option is deprecated.
-- Supported ciphers:
-  - aes-128-cbc
-  - aes-128-cfb
-  - aes-128-cfb1
-  - aes-128-cfb8
-  - aes-128-ctr
-  - aes-128-ecb
-  - aes-128-ofb
-  - aes-192-cbc
-  - aes-192-cfb
-  - aes-192-cfb1
-  - aes-192-cfb8
-  - aes-192-ctr
-  - aes-192-ecb
-  - aes-192-ofb
-  - aes-256-cbc
-  - aes-256-cfb
-  - aes-256-cfb1
-  - aes-256-cfb8
-  - aes-256-ctr
-  - aes-256-ecb
-  - aes-256-ofb
-  - aes128
-  - aes128-wrap
-  - aes128-wrap-pad
-  - aes192
-  - aes192-wrap
-  - aes192-wrap-pad
-  - aes256
-  - aes256-wrap
-  - aes256-wrap-pad
-  - aria-128-cbc
-  - aria-128-cfb
-  - aria-128-cfb1
-  - aria-128-cfb8
-  - aria-128-ctr
-  - aria-128-ecb
-  - aria-128-ofb
-  - aria-192-cbc
-  - aria-192-cfb
-  - aria-192-cfb1
-  - aria-192-cfb8
-  - aria-192-ctr
-  - aria-192-ecb
-  - aria-192-ofb
-  - aria-256-cbc
-  - aria-256-cfb
-  - aria-256-cfb1
-  - aria-256-cfb8
-  - aria-256-ctr
-  - aria-256-ecb
-  - aria-256-ofb
-  - aria128
-  - aria192
-  - aria256
-  - bf
-  - bf-cbc
-  - bf-cfb
-  - bf-ecb
-  - bf-ofb
-  - blowfish
-  - camellia-128-cbc
-  - camellia-128-cfb
-  - camellia-128-cfb1
-  - camellia-128-cfb8
-  - camellia-128-ctr
-  - camellia-128-ecb
-  - camellia-128-ofb
-  - camellia-192-cbc
-  - camellia-192-cfb
-  - camellia-192-cfb1
-  - camellia-192-cfb8
-  - camellia-192-ctr
-  - camellia-192-ecb
-  - camellia-192-ofb
-  - camellia-256-cbc
-  - camellia-256-cfb
-  - camellia-256-cfb1
-  - camellia-256-cfb8
-  - camellia-256-ctr
-  - camellia-256-ecb
-  - camellia-256-ofb
-  - camellia128
-  - camellia192
-  - camellia256
-  - cast
-  - cast-cbc
-  - cast5-cbc
-  - cast5-cfb
-  - cast5-ecb
-  - cast5-ofb
-  - chacha20
-  - des
-  - des-cbc
-  - des-cfb
-  - des-cfb1
-  - des-cfb8
-  - des-ecb
-  - des-ede
-  - des-ede-cbc
-  - des-ede-cfb
-  - des-ede-ecb
-  - des-ede-ofb
-  - des-ede3
-  - des-ede3-cbc
-  - des-ede3-cfb
-  - des-ede3-cfb1
-  - des-ede3-cfb8
-  - des-ede3-ecb
-  - des-ede3-ofb
-  - des-ofb
-  - des3
-  - des3-wrap
-  - desx
-  - desx-cbc
-  - id-aes128-wrap
-  - id-aes128-wrap-pad
-  - id-aes192-wrap
-  - id-aes192-wrap-pad
-  - id-aes256-wrap
-  - id-aes256-wrap-pad
-  - id-smime-alg-CMS3DESwrap
-  - idea
-  - idea-cbc
-  - idea-cfb
-  - idea-ecb
-  - idea-ofb
-  - rc2
-  - rc2-128
-  - rc2-40
-  - rc2-40-cbc
-  - rc2-64
-  - rc2-64-cbc
-  - rc2-cbc
-  - rc2-cfb
-  - rc2-ecb
-  - rc2-ofb
-  - rc4
-  - rc4-40
-  - seed
-  - seed-cbc
-  - seed-cfb
-  - seed-ecb
-  - seed-ofb
-  - sm4
-  - sm4-cbc
-  - sm4-cfb
-  - sm4-ctr
-  - sm4-ecb
-  - sm4-ofb</p>
+<strong>OPTIONS</strong>:</p>
+<ul>
+<li>-help: Print out a usage message.</li>
+<li>-list: List all supported ciphers.</li>
+<li>-ciphers: Alias of -list to display all supported ciphers.</li>
+<li>-in filename: The input filename, standard input by default.</li>
+<li>-out filename: The output filename, standard output by default.</li>
+<li>-pass arg: The password source. For more information about the format of arg see "Pass Phrase Options" in openssl(1).</li>
+<li>-e: Encrypt the input data: this is the default.</li>
+<li>-d: Decrypt the input data.</li>
+<li>-a: Base64 process the data. This means that if encryption is taking place the data is base64 encoded after encryption. If decryption is set then the input data is base64 decoded before being decrypted.</li>
+<li>-base64: Same as -a</li>
+<li>-A: If the -a option is set then base64 process the data on one line.</li>
+<li>-k password: The password to derive the key from. This is for compatibility with previous versions of OpenSSL. Superseded by the -pass argument.</li>
+<li>-kfile filename: Read the password to derive the key from the first line of filename. This is for compatibility with previous versions of OpenSSL. Superseded by the -pass argument.</li>
+<li>-md digest: Use the specified digest to create the key from the passphrase. The default algorithm is sha-256.</li>
+<li>-iter count: Use a given number of iterations on the password in deriving the encryption key. High values increase the time required to brute-force the resulting file. This option enables the use of PBKDF2 algorithm to derive the key.</li>
+<li>-pbkdf2: Use PBKDF2 algorithm with a default iteration count of 10000 unless otherwise specified by the -iter command line option.</li>
+<li>-saltlen: Set the salt length to use when using the -pbkdf2 option. For compatibility reasons, the default is 8 bytes. The maximum value is currently 16 bytes. If the -pbkdf2 option is not used, then this option is ignored and a fixed salt length of 8 is used. The salt length used when encrypting must also be used when decrypting.</li>
+<li>-nosalt: Don't use a salt in the key derivation routines. This option SHOULD NOT be used except for test purposes or compatibility with ancient versions of OpenSSL.</li>
+<li>-z: Compress or decompress encrypted data using zlib after encryption or before decryption. This option exists only if OpenSSL was compiled with the zlib or zlib-dynamic option.</li>
+<li>-none: Use NULL cipher (no encryption or decryption of input).</li>
+<li>-rand files, -writerand file: See "Random State Options" in openssl(1) for details.</li>
+<li>-provider name: -provider-path path: -propquery propq: See "Provider Options" in openssl(1), provider(7), and property(7).</li>
+<li>-engine id: See "Engine Options" in openssl(1). This option is deprecated.</li>
+<li>Supported ciphers:
+<ul>
+<li>aes-128-cbc</li>
+<li>aes-128-cfb</li>
+<li>aes-128-cfb1</li>
+<li>aes-128-cfb8</li>
+<li>aes-128-ctr</li>
+<li>aes-128-ecb</li>
+<li>aes-128-ofb</li>
+<li>aes-192-cbc</li>
+<li>aes-192-cfb</li>
+<li>aes-192-cfb1</li>
+<li>aes-192-cfb8</li>
+<li>aes-192-ctr</li>
+<li>aes-192-ecb</li>
+<li>aes-192-ofb</li>
+<li>aes-256-cbc</li>
+<li>aes-256-cfb</li>
+<li>aes-256-cfb1</li>
+<li>aes-256-cfb8</li>
+<li>aes-256-ctr</li>
+<li>aes-256-ecb</li>
+<li>aes-256-ofb</li>
+<li>aes128</li>
+<li>aes128-wrap</li>
+<li>aes128-wrap-pad</li>
+<li>aes192</li>
+<li>aes192-wrap</li>
+<li>aes192-wrap-pad</li>
+<li>aes256</li>
+<li>aes256-wrap</li>
+<li>aes256-wrap-pad</li>
+<li>aria-128-cbc</li>
+<li>aria-128-cfb</li>
+<li>aria-128-cfb1</li>
+<li>aria-128-cfb8</li>
+<li>aria-128-ctr</li>
+<li>aria-128-ecb</li>
+<li>aria-128-ofb</li>
+<li>aria-192-cbc</li>
+<li>aria-192-cfb</li>
+<li>aria-192-cfb1</li>
+<li>aria-192-cfb8</li>
+<li>aria-192-ctr</li>
+<li>aria-192-ecb</li>
+<li>aria-192-ofb</li>
+<li>aria-256-cbc</li>
+<li>aria-256-cfb</li>
+<li>aria-256-cfb1</li>
+<li>aria-256-cfb8</li>
+<li>aria-256-ctr</li>
+<li>aria-256-ecb</li>
+<li>aria-256-ofb</li>
+<li>aria128</li>
+<li>aria192</li>
+<li>aria256</li>
+<li>bf</li>
+<li>bf-cbc</li>
+<li>bf-cfb</li>
+<li>bf-ecb</li>
+<li>bf-ofb</li>
+<li>blowfish</li>
+<li>camellia-128-cbc</li>
+<li>camellia-128-cfb</li>
+<li>camellia-128-cfb1</li>
+<li>camellia-128-cfb8</li>
+<li>camellia-128-ctr</li>
+<li>camellia-128-ecb</li>
+<li>camellia-128-ofb</li>
+<li>camellia-192-cbc</li>
+<li>camellia-192-cfb</li>
+<li>camellia-192-cfb1</li>
+<li>camellia-192-cfb8</li>
+<li>camellia-192-ctr</li>
+<li>camellia-192-ecb</li>
+<li>camellia-192-ofb</li>
+<li>camellia-256-cbc</li>
+<li>camellia-256-cfb</li>
+<li>camellia-256-cfb1</li>
+<li>camellia-256-cfb8</li>
+<li>camellia-256-ctr</li>
+<li>camellia-256-ecb</li>
+<li>camellia-256-ofb</li>
+<li>camellia128</li>
+<li>camellia192</li>
+<li>camellia256</li>
+<li>cast</li>
+<li>cast-cbc</li>
+<li>cast5-cbc</li>
+<li>cast5-cfb</li>
+<li>cast5-ecb</li>
+<li>cast5-ofb</li>
+<li>chacha20</li>
+<li>des</li>
+<li>des-cbc</li>
+<li>des-cfb</li>
+<li>des-cfb1</li>
+<li>des-cfb8</li>
+<li>des-ecb</li>
+<li>des-ede</li>
+<li>des-ede-cbc</li>
+<li>des-ede-cfb</li>
+<li>des-ede-ecb</li>
+<li>des-ede-ofb</li>
+<li>des-ede3</li>
+<li>des-ede3-cbc</li>
+<li>des-ede3-cfb</li>
+<li>des-ede3-cfb1</li>
+<li>des-ede3-cfb8</li>
+<li>des-ede3-ecb</li>
+<li>des-ede3-ofb</li>
+<li>des-ofb</li>
+<li>des3</li>
+<li>des3-wrap</li>
+<li>desx</li>
+<li>desx-cbc</li>
+<li>id-aes128-wrap</li>
+<li>id-aes128-wrap-pad</li>
+<li>id-aes192-wrap</li>
+<li>id-aes192-wrap-pad</li>
+<li>id-aes256-wrap</li>
+<li>id-aes256-wrap-pad</li>
+<li>id-smime-alg-CMS3DESwrap</li>
+<li>idea</li>
+<li>idea-cbc</li>
+<li>idea-cfb</li>
+<li>idea-ecb</li>
+<li>idea-ofb</li>
+<li>rc2</li>
+<li>rc2-128</li>
+<li>rc2-40</li>
+<li>rc2-40-cbc</li>
+<li>rc2-64</li>
+<li>rc2-64-cbc</li>
+<li>rc2-cbc</li>
+<li>rc2-cfb</li>
+<li>rc2-ecb</li>
+<li>rc2-ofb</li>
+<li>rc4</li>
+<li>rc4-40</li>
+<li>seed</li>
+<li>seed-cbc</li>
+<li>seed-cfb</li>
+<li>seed-ecb</li>
+<li>seed-ofb</li>
+<li>sm4</li>
+<li>sm4-cbc</li>
+<li>sm4-cfb</li>
+<li>sm4-ctr</li>
+<li>sm4-ecb</li>
+<li>sm4-ofb</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h2>File and Directory Management of Termux and Linux</h2>
 <h3><code>cp</code> (Copy files and directories)</h3>
@@ -1825,27 +1831,31 @@ Use SFTP server mount if you encounter errors in this method.</p>
 <h2>You can install <strong>Linux Command Library</strong> in Google Play: <a href="https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca">https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca</a> or F-Droid: <a href="https://f-droid.org/packages/com.inspiredandroid.linuxcommandbibliotheca/">https://f-droid.org/packages/com.inspiredandroid.linuxcommandbibliotheca/</a>, or browse it on its official website: <a href="https://linuxcommandlibrary.com/">https://linuxcommandlibrary.com/</a>.</h2>
 <h2>Linux and Termux Odds and Ends</h2>
 <h3>apt (Termux, Debian, etc.)</h3>
-<p>apt is a commandline package manager and provides commands for searching and managing as well as querying information about packages. It provides the same functionality as the specialized APT tools, like apt-get and apt-cache, but enables options more suitable for interactive use by default.<br>
-- Usage: <code>apt [options] command</code>
-- Synopsys: <code>apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture] {list | search | show | update | install pkg [{=pkg_version_number | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v | --version} | {-h | --help}}</code>
-- Most used commands:
-  - <code>list</code> - list packages based on package names
-  - <code>search</code> - search in package descriptions
-  - <code>show</code> - show package details
-  - <code>install</code> - install packages
-  - <code>reinstall</code> - reinstall packages
-  - <code>remove</code> - remove packages
-  - <code>autoremove</code> - automatically remove all unused packages
-  - <code>update</code> - update list of available packages
-  - <code>upgrade</code> - upgrade the system by installing/upgrading packages
-  - <code>full-upgrade</code> - upgrade the system by removing/installing/upgrading packages
-  - <code>edit-sources</code> - edit the source information file
-  - <code>satisfy</code> - satisfy dependency strings
-- See apt(8) for more information about the available commands: <a href="https://manpages.debian.org/unstable/apt/apt.8.en.html">https://manpages.debian.org/unstable/apt/apt.8.en.html</a>.
-- Configuration options and syntax is detailed in apt.conf(5): <a href="https://manpages.debian.org/unstable/apt/apt.conf.5.en.html">https://manpages.debian.org/unstable/apt/apt.conf.5.en.html</a>.
-- Information about how to configure sources can be found in sources.list(5): <a href="https://manpages.debian.org/unstable/apt/sources.list.5.en.html">https://manpages.debian.org/unstable/apt/sources.list.5.en.html</a>.
-- Package and version choices can be expressed via apt_preferences(5): <a href="https://manpages.debian.org/unstable/apt/apt_preferences.5.en.html">https://manpages.debian.org/unstable/apt/apt_preferences.5.en.html</a>.
-- Security details are available in apt-secure(8): <a href="https://manpages.debian.org/unstable/apt/apt-secure.8.en.html">https://manpages.debian.org/unstable/apt/apt-secure.8.en.html</a>.</p>
+<p>apt is a commandline package manager and provides commands for searching and managing as well as querying information about packages. It provides the same functionality as the specialized APT tools, like apt-get and apt-cache, but enables options more suitable for interactive use by default.</p>
+<ul>
+<li>Usage: <code>apt [options] command</code></li>
+<li>Synopsys: <code>apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture] {list | search | show | update | install pkg [{=pkg_version_number | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v | --version} | {-h | --help}}</code></li>
+<li>Most used commands:
+<ul>
+<li><code>list</code> - list packages based on package names</li>
+<li><code>search</code> - search in package descriptions</li>
+<li><code>show</code> - show package details</li>
+<li><code>install</code> - install packages</li>
+<li><code>reinstall</code> - reinstall packages</li>
+<li><code>remove</code> - remove packages</li>
+<li><code>autoremove</code> - automatically remove all unused packages</li>
+<li><code>update</code> - update list of available packages</li>
+<li><code>upgrade</code> - upgrade the system by installing/upgrading packages</li>
+<li><code>full-upgrade</code> - upgrade the system by removing/installing/upgrading packages</li>
+<li><code>edit-sources</code> - edit the source information file</li>
+<li><code>satisfy</code> - satisfy dependency strings</li>
+</ul></li>
+<li>See apt(8) for more information about the available commands: <a href="https://manpages.debian.org/unstable/apt/apt.8.en.html">https://manpages.debian.org/unstable/apt/apt.8.en.html</a>.</li>
+<li>Configuration options and syntax is detailed in apt.conf(5): <a href="https://manpages.debian.org/unstable/apt/apt.conf.5.en.html">https://manpages.debian.org/unstable/apt/apt.conf.5.en.html</a>.</li>
+<li>Information about how to configure sources can be found in sources.list(5): <a href="https://manpages.debian.org/unstable/apt/sources.list.5.en.html">https://manpages.debian.org/unstable/apt/sources.list.5.en.html</a>.</li>
+<li>Package and version choices can be expressed via apt_preferences(5): <a href="https://manpages.debian.org/unstable/apt/apt_preferences.5.en.html">https://manpages.debian.org/unstable/apt/apt_preferences.5.en.html</a>.</li>
+<li>Security details are available in apt-secure(8): <a href="https://manpages.debian.org/unstable/apt/apt-secure.8.en.html">https://manpages.debian.org/unstable/apt/apt-secure.8.en.html</a>.</li>
+</ul>
 <h3>Commands for Copy</h3>
 <h4>Linux Setup Command</h4>
 <p><code>sudo apt update &amp;&amp; sudo apt upgrade
@@ -2027,7 +2037,7 @@ pip3 install numpy pandas sympy matplotlib numba nuitka setuptools selenium cona
 <p>You should have received a copy of the Creative Commons Attribution-ShareAlike 4.0 International License along with this program. If not, see <a href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a>.</p>
 </div>
 <footer>
-<p>&copy; 2024 Willie Shen. Licensed Under <strong>GNU Free Documentation License, Version 1.3 (GFDL 1.3)</strong> or <strong>Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)</strong></p>
+<p>&copy; 2024 Willie Shen. Licensed Under <strong>GFDL 1.3</strong> or <strong>CC BY-SA 4.0</strong></p>
 </footer>
 </body>
 </html>

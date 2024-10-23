@@ -1,0 +1,165 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+	background-color: #f5f5f5;
+	color: #333;
+	padding: 0;
+	margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto', sans-serif;
+	color: #007acc;
+	margin-bottom: 15px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	border-bottom: 2px solid #007acc;
+	padding-bottom: 10px;
+}
+
+h2 {
+	font-size: 2rem;
+	border-bottom: 1px solid #007acc;
+	padding-bottom: 8px;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+.navbar {
+	width: 100%;
+	background-color: #333;
+	color: white;
+	padding: 10px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	margin-left: 20px;
+}
+
+.navbar a:hover {
+	color: #007acc;
+}
+
+button {
+	background-color: #007acc;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #005f8d;
+}
+
+.content {
+	margin: 20px;
+	padding: 60px 20px;
+	text-align: center;
+}
+
+a {
+	color: #007acc;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin-top: 40px;
+	position: fixed;
+    width:100%;
+    overflow: auto;
+	bottom: 0;
+}
+
+footer p {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+ul,
+ol {
+	margin: 20px;
+	padding-left: 40px;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+li {
+	margin-bottom: 10px;
+	font-size: 1.1rem;
+}
+
+li::marker {
+	font-size: 1.3rem;
+	color: #007acc;
+}
+
+pre {
+	background-color: #2d2d2d;
+	color: #f8f8f2;
+	padding: 15px;
+	border-radius: 5px;
+	overflow-x: auto;
+	font-size: 1rem;
+	margin-bottom: 20px;
+}
+
+pre code {
+	font-family: 'Fira Code', monospace;
+}
+
+code {
+	background-color: #e8e8e8;
+	color: #d6336c;
+	padding: 2px 5px;
+	border-radius: 3px;
+	font-size: 0.95rem;
+}
+
+li:hover {
+	background-color: #f0faff;
+}
+
+pre:hover {
+	background-color: #3c3c3c;
+}
