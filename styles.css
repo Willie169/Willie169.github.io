@@ -67,7 +67,7 @@ h3 {
 button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     background-color: #007acc;
     color: white;
     border: none;
