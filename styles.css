@@ -64,15 +64,18 @@ h3 {
 	color: #007acc;
 }
 
-button {
-	background-color: #333;
-	color: white;
-	border: none;
-	padding: 20px 20px;
-	font-size: 1rem;
-	cursor: pointer;
-	border-radius: 5px;
-	transition: background-color 0.3s ease;
+backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
