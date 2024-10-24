@@ -1,7 +1,3 @@
-function scrollToTop() {
-  document.getElementById('h1').scrollIntoView();
-}
-
 document.addEventListener('DOMContentLoaded', function() {
   const tocList = document.getElementById('toc-list');
   const headers = document.querySelectorAll('h2, h3');
