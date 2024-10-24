@@ -65,12 +65,14 @@ h3 {
 }
 
 button {
+    display: none;
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
     background-color: #007acc;
     color: white;
     border: none;
+    outline: none;
     padding: 20px 20px;
     font-size: 1rem;
     cursor: pointer;
