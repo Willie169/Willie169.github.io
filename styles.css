@@ -123,7 +123,8 @@ li {
 	font-size: 1.1rem;
 }
 
-li::marker {
+li::marker,
+#toc-list li::marker {
 	font-size: 1.3rem;
 	color: #007acc;
 }
@@ -180,7 +181,7 @@ pre:hover {
 }
 
 #toc-list li {
-  list-style: none;
+  list-style: disc;
   margin: 5px 0;
 }
 
@@ -191,4 +192,10 @@ pre:hover {
 
 #toc-list li.h3 {
   margin-left: 20px;
+}
+
+#top {
+    width: 0;
+    height: 0;
+    display: inline-block;
 }

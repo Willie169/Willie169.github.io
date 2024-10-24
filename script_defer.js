@@ -1,3 +1,3 @@
 function scrollToTop() {
-  document.getElementById('h1').scrollIntoView();
+  document.getElementById('top').scrollIntoView();
 }

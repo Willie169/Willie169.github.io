@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const headers = document.querySelectorAll('h2, h3');
 
   headers.forEach((header, index) => {
-    const id = `header-${index}`;
+    const id = `hd${index}`;
     header.id = id;
 
     const listItem = document.createElement('li');
