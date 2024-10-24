@@ -1,3 +1,8 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.6;
@@ -24,7 +29,7 @@ h6 {
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	border-bottom: 2px solid #007acc;
 	padding-bottom: 10px;
 }
@@ -87,7 +92,7 @@ button:hover {
 .content {
 	margin: 20px;
 	padding: 60px 20px;
-	text-align: center;
+	text-align: left;
 }
 
 a {
@@ -162,4 +167,28 @@ pre:hover {
 .container a img {
     max-width: 100px;
     height: auto;
+}
+
+#table-of-contents {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+#table-of-contents h2 {
+  font-size: 1.2em;
+}
+
+#toc-list li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+#toc-list li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#toc-list li.h3 {
+  margin-left: 20px;
 }
