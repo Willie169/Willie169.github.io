@@ -130,17 +130,12 @@ li::marker,
 }
 
 pre {
-	background-color: #2d2d2d;
-	color: #f8f8f2;
-	padding: 15px;
-	border-radius: 5px;
-	overflow-x: auto;
-	font-size: 1rem;
-	margin-bottom: 20px;
-}
-
-pre code {
-	font-family: 'Fira Code', monospace;
+    background-color: #e8e8e8;
+    border-radius: 3px solid #848484;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    line-height: 1.5;
 }
 
 code {
@@ -149,6 +144,17 @@ code {
 	padding: 2px 5px;
 	border-radius: 3px;
 	font-size: 0.95rem;
+	font-family: 'Fira Code', monospace;
+}
+
+pre code {
+  display: block;
+  background: none;
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 100px;
+  padding: 0;
 }
 
 li:hover {
@@ -156,7 +162,7 @@ li:hover {
 }
 
 pre:hover {
-	background-color: #3c3c3c;
+	background-color: #f8f8f8;
 }
 
 .container {
