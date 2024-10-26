@@ -858,7 +858,7 @@ pm grant com.zacharee1.systemuituner android.permission.DUMP
 <li>Block unwanted trackers. </li>
 <li><strong>Note</strong>: If you export settings and import it on another device, the blocklist won't be able to be configured as that in the previous device.</li>
 <li>You can apply some of the above settings with the <code>.xml</code> below (assuming the configuration of <strong>Invizible Pro</strong> is as in this guide) by coping it, storing it in a <code>.xml</code> file and going to <strong>Settings > Backup > Import settings</strong> to import this file. However, it just contains some of the settings, you have to configure others yourself and test whether your applications work as normal because things may vary from case to case. 
-<code>
+<pre><code>
 &lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
 &lt;trackercontrol&gt;
   &lt;application&gt;
@@ -889,7 +889,7 @@ pm grant com.zacharee1.systemuituner android.permission.DUMP
     &lt;port pkg="nobody" protocol="6" dport="53" raddr="127.0.0.1" rport="5354" /&gt;
   &lt;/forward&gt;
 &lt;/trackercontrol&gt;
-</code></li>
+</code><pre></li>
 <li><strong>Note</strong>: <strong>TrackerControl</strong> has a <strong>Traffic log</strong> feature for free, which can help a lot in identifying which trackers should be unblocked when the services crash.</li>
 <li><strong>Note</strong>: The above guide, including the setting <code>.xml</code>, can be used in <strong>NetGuard</strong> as well because <strong>TrackerControl</strong> uses <strong>NetGuard</strong>'s code. However, <strong>Traffic log</strong> feature is not available in <strong>NetGuard</strong>'s free version but only available in <strong>TrackerControl</strong> and <strong>NetGuard</strong>'s <strong>Pro</strong> version. <strong>NetGuard</strong> is available on Google Play and F-Droid. Google Play: <a href="https://play.google.com/store/apps/details?id=eu.faircode.netguard">https://play.google.com/store/apps/details?id=eu.faircode.netguard</a>. F-Droid: <a href="https://f-droid.org/packages/eu.faircode.netguard/">https://f-droid.org/packages/eu.faircode.netguard/</a>. </li>
 <li><strong>Note</strong>: You may have to disable monitoring of apps route traffic through Tor itself within <strong>TrackerControl</strong>, like <strong>Tor Browser</strong>,  and <strong>Termux</strong> if you're using <code>tor</code>, <code>torsocks</code>, or similar things.</li>
@@ -914,7 +914,7 @@ pm grant com.zacharee1.systemuituner android.permission.DUMP
 <li>Set other things if you want.</li>
 <li>You can apply some of the above settings with the files below (assuming the configuration of <strong>TrackerControl</strong> is as in this guide). However, they just contain some of the settings, you have to configure others yourself and test whether your applications work as normal because things may vary from case to case. <ul>
 <li><code>dns-proxy.toml</code>: Copy the text in the below block, tap <code>Edit dns-proxy.toml</code> in <strong>DNSCrypt Settings</strong>, and paste.
-<code>
+<pre><code>
 ipv4_servers = true
 ipv6_servers = true
 require_dnssec = true
@@ -1015,9 +1015,9 @@ routes = [
 { server_name = 'adguard-dns-ipv6', via=['anon-ams-ipv6', 'anon-scaleway-ams-ipv6', 'anon-tiarap-ipv6'] }
 ]
 [static]
-</code></li>
+</code></pre></li>
 <li><code>tor.conf</code>: Copy the text in the below block, tap <code>Edit tor.conf</code> in <strong>Tor Settings</strong>, and paste.
-<code>
+<pre><code>
 RunAsDaemon 0
 AvoidDiskWrites 1
 AutomapHostsOnResolve 1
@@ -1057,7 +1057,7 @@ CircuitsAvailableTimeout 86400
 ClientUseIPv4 1
 ClientUseIPv6 1
 UseBridges 0
-</code></li></ul></li>
+</code><pre></li></ul></li>
 <li>Turn both <strong>Tor</strong> and <strong>DNSCrypt</strong> of <strong>InviZible Pro</strong> on.</li>
 <li><strong>Note</strong>: Some services may crash when routing traffic through <code>tor</code> (set in <strong>Using SOCKS5 proxy</strong> in <strong>TrackerControl</strong>), change the <strong>Exit nodes</strong> to the service's country or region of publication in <strong>InviZible Pro</strong> may help. Otherwise, you may try disabling monitoring that app or stopping <strong>Using SOCKS5 proxy</strong> in <strong>TrackerControl</strong>, which compromise your privacy to some degree.</li>
 </ul>
