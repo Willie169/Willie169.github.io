@@ -29,7 +29,7 @@ h6 {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	border-bottom: 2px solid #007acc;
 	padding-bottom: 10px;
 }
@@ -120,12 +120,12 @@ ol {
 
 li {
 	margin-bottom: 10px;
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 li::marker,
 #toc-list li::marker {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	color: #007acc;
 }
 
@@ -143,7 +143,7 @@ code {
 	color: #d6336c;
 	padding: 2px 5px;
 	border-radius: 3px;
-	font-size: 0.95rem;
+	font-size: 1rem;
 	font-family: 'Fira Code', monospace;
 }
 
