@@ -29,19 +29,25 @@ h6 {
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	border-bottom: 2px solid #007acc;
 	padding-bottom: 10px;
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 1.6rem;
 	border-bottom: 1px solid #007acc;
 	padding-bottom: 8px;
 }
 
 h3 {
-	font-size: 1.75rem;
+	font-size: 1.4rem;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1.2rem;
 }
 
 .navbar {
