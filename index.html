@@ -137,7 +137,7 @@ Please read the <a href="#hd1">Global Note</a> before you start or you may encou
 <p>Run the following command <strong>Termux</strong>:</p>
 <pre><code>termux-setup-storage
 </code></pre>
-<p>and tap <strong>Allow</strong>.\
+<p>and tap <strong>Allow</strong>.<br />
 Many processes mentioned in this tutorial need <strong>Termux</strong> to have this permission.</p>
 <h3 id="termuxproperties">Termux-Properties</h3>
 <p>You can edit properties of <strong>Termux</strong> by:</p>
@@ -145,7 +145,7 @@ Many processes mentioned in this tutorial need <strong>Termux</strong> to have t
 </code></pre>
 <p>Properties can be changed including <code>default-working-directory</code>, <code>allow-external-apps</code>, <code>volume-keys</code>, etc.</p>
 <h3 id="termuxpkgpackagemanagement">Termux pkg Package Management</h3>
-<p>pkg is a tool for managing apt packages.\
+<p>pkg is a tool for managing apt packages.<br />
 Usage: <code>pkg [--check-mirror] command [arguments]</code>.</p>
 <ul>
 <li><code>--check-mirror</code> - forces a re-check of availability of mirrors</li>
@@ -272,7 +272,7 @@ settings put global settings_enable_monitor_phantom_procs true
 <p>X11 packages are available in a separate APT repository. You can enable it by running the following command:</p>
 <pre><code>pkg install x11-repo
 </code></pre>
-<p>It will automatically add appropriate sources.list file and PGP key.\
+<p>It will automatically add appropriate sources.list file and PGP key.<br />
 You can disable this repository by running the following command:</p>
 <pre><code>pkg uninstall x11-repo
 </code></pre>
@@ -285,15 +285,15 @@ You can disable this repository by running the following command:</p>
 <p>Not specifying port:</p>
 <pre><code>vncserver -localhost
 </code></pre>
-<p>VNC server will start on unused port with the smallest positive integer number, like <code>localhost:1</code> if port 1 is not used.\
+<p>VNC server will start on unused port with the smallest positive integer number, like <code>localhost:1</code> if port 1 is not used.<br />
 Specifying port:</p>
 <pre><code>vncserver :1
 </code></pre>
-<p>VNC server will start on the port you specified.\
+<p>VNC server will start on the port you specified.<br />
 Specifying resolution:</p>
 <pre><code>vncserver :1 -geometry 1920x1080
 </code></pre>
-<p>You can specify resolution with <code>-geometry</code>.\
+<p>You can specify resolution with <code>-geometry</code>.<br />
 At first time, you will be prompted for setting up passwords:</p>
 <pre><code>You will require a password to access your desktops.
 
@@ -301,7 +301,7 @@ Password:
 Verify:
 Would you like to enter a view-only password (y/n)? n
 </code></pre>
-<p>Note that passwords are not visible when you are typing them and maximal password length is 8 characters.\
+<p>Note that passwords are not visible when you are typing them and maximal password length is 8 characters.<br />
 If everything is okay, you will see this message:</p>
 <pre><code>New 'localhost:1 ()' desktop is localhost:1
 
@@ -310,11 +310,11 @@ Creating default config /data/data/com.termux/files/home/.vnc/config
 Starting applications specified in /data/data/com.termux/files/home/.vnc/xstartup
 Log file is /data/data/com.termux/files/home/.vnc/localhost:1.log
 </code></pre>
-<p>It means that the server is available on display <code>localhost:1</code>. \
+<p>It means that the server is available on display <code>localhost:1</code>. <br />
 To make programs do graphical output to the display <code>localhost:1</code>, set environment variable like shown here (yes, without specifying <code>localhost</code>):</p>
 <pre><code>export DISPLAY=":1"
 </code></pre>
-<p>You may even put this variable to your bashrc or profile so you don't have to always set it manually unless display address will be changed.\
+<p>You may even put this variable to your bashrc or profile so you don't have to always set it manually unless display address will be changed.<br />
 Connect to the VNC server from a VNC viewer to view the output, you will not see anything except your mouse pointer if no windows manager or desktop environment is started.</p>
 <h4 id="killallvncservers">Kill All VNC Servers</h4>
 <pre><code>vncserver -kill localhost:1
@@ -374,7 +374,7 @@ pypanel &amp;
 <pre><code>#!/data/data/com.termux/files/usr/bin/sh
 xfce4-session &amp;
 </code></pre>
-<p>Don't put any other command to the file <code>~/.vnc/xstartup</code> but only the lines shown above.\
+<p>Don't put any other command to the file <code>~/.vnc/xstartup</code> but only the lines shown above.<br />
 XFCE will start automatically on VNC server startup.</p>
 <h4 id="additionalrecommendedpackagesforinstallation">Additional Recommended Packages for Installation</h4>
 <ul>
@@ -392,7 +392,7 @@ XFCE will start automatically on VNC server startup.</p>
 <pre><code>#!/data/data/com.termux/files/usr/bin/sh
 startlxqt &amp;
 </code></pre>
-<p>Don't put any other command to the file <code>~/.vnc/xstartup</code> but only the lines shown above.\
+<p>Don't put any other command to the file <code>~/.vnc/xstartup</code> but only the lines shown above.<br />
 LXQt will start automatically on VNC server startup.</p>
 <h4 id="additionalrecommendedpackagesforinstallation-1">Additional Recommended Packages for Installation</h4>
 <ul>
@@ -410,7 +410,7 @@ LXQt will start automatically on VNC server startup.</p>
 <pre><code>#!/data/data/com.termux/files/usr/bin/sh
 mate-session &amp;
 </code></pre>
-<p>Don't put any other command to the file <code>~/.vnc/xstartup</code> but only the lines shown above.\
+<p>Don't put any other command to the file <code>~/.vnc/xstartup</code> but only the lines shown above.<br />
 MATE will start automatically on VNC server startup.</p>
 <h4 id="additionalrecommendedpackagesforinstallation-2">Additional Recommended Packages for Installation</h4>
 <ul>
@@ -498,7 +498,7 @@ MATE will start automatically on VNC server startup.</p>
 <pre><code>pkg install qemu-system-x86_64 qemu-utils qemu-common openssl
 </code></pre>
 <h3 id="isoimagemethod">ISO Image method</h3>
-<p>This method is more customizable but may encounter some issues like GRUB menu not showing on CLI or stuck at 79% or 83% of the installation of the base system. Use qcow2 cloud image method if you don't prepare to solve these problems. This tutorial assumes no such problems are encounter.\
+<p>This method is more customizable but may encounter some issues like GRUB menu not showing on CLI or stuck at 79% or 83% of the installation of the base system. Use qcow2 cloud image method if you don't prepare to solve these problems. This tutorial assumes no such problems are encounter.<br />
 It is recommended to get started with Ubuntu or Debian if you are overwhelmed by the options.</p>
 <h4 id="preparetheisoimage">Prepare the ISO Image</h4>
 <p>Prepare the ISO image. Here takes Debian AMD64 for example. Change the URL to the download link of the ISO image you want or <code>cp</code> or <code>mv</code> the ISO image you want to the directory you want.</p>
@@ -512,25 +512,25 @@ It is recommended to get started with Ubuntu or Debian if you are overwhelmed by
 <pre><code>nano install-qemu.sh
 </code></pre>
 <p>Copy below command and paste to it:</p>
-<pre><code>qemu-system-x86_64 -machine q35 \
--drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd \
--m 2G \
--accel tcg,thread=multi \
--smp sockets=1,cores=4,threads=1 \
--cpu qemu64 \
--vga std \
--netdev user,id=n1,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 \
--device intel-hda \
--device qemu-xhci \
--boot d \
--boot menu=on \
--drive file=debian_amd64.qcow2 \
--nographic \
--serial mon:stdio \
--display none \
+<pre><code>qemu-system-x86_64 -machine q35 <br />
+-drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd <br />
+-m 2G <br />
+-accel tcg,thread=multi <br />
+-smp sockets=1,cores=4,threads=1 <br />
+-cpu qemu64 <br />
+-vga std <br />
+-netdev user,id=n1,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 <br />
+-device intel-hda <br />
+-device qemu-xhci <br />
+-boot d <br />
+-boot menu=on <br />
+-drive file=debian_amd64.qcow2 <br />
+-nographic <br />
+-serial mon:stdio <br />
+-display none <br />
 -cdrom ~/debian-12.7.0-amd64-DVD-1.iso
 </code></pre>
-<p>Adjust <code>hostfwd</code> as needed. In the above command, <code>tcp</code> specifies the TCP protocol for the forwarding rule, <code>::2222</code> indicates that on the host machine, TCP connections to port 2222 will be forwarded, and <code>-:22</code> indicates that these connections will be forwarded to port 22 (the default SSH port) on the guest virtual machine. Change the <code>debian_amd64.qcow2</code> to the real file name. Change the <code>debian-12.7.0-amd64-netinst.iso</code> to the real ISO path. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed.\
+<p>Adjust <code>hostfwd</code> as needed. In the above command, <code>tcp</code> specifies the TCP protocol for the forwarding rule, <code>::2222</code> indicates that on the host machine, TCP connections to port 2222 will be forwarded, and <code>-:22</code> indicates that these connections will be forwarded to port 22 (the default SSH port) on the guest virtual machine. Change the <code>debian_amd64.qcow2</code> to the real file name. Change the <code>debian-12.7.0-amd64-netinst.iso</code> to the real ISO path. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed.<br />
 Make it executable:</p>
 <pre><code>chmod +x install-qemu.sh
 </code></pre>
@@ -542,22 +542,22 @@ Make it executable:</p>
 <pre><code>nano install-qemu.sh
 </code></pre>
 <p>Copy below command and paste to it:</p>
-<pre><code>qemu-system-x86_64 -machine q35 \
--drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd \
--m 2G \
--accel tcg,thread=multi \
--smp sockets=1,cores=4,threads=1 \
--cpu qemu64 \
--vga std \
--netdev user,id=n1,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 \
--device intel-hda \
--device usb-tablet \
--boot menu=on \
--drive file=debian_amd64.qcow2 \
---vnc :0 \
+<pre><code>qemu-system-x86_64 -machine q35 <br />
+-drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd <br />
+-m 2G <br />
+-accel tcg,thread=multi <br />
+-smp sockets=1,cores=4,threads=1 <br />
+-cpu qemu64 <br />
+-vga std <br />
+-netdev user,id=n1,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 <br />
+-device intel-hda <br />
+-device usb-tablet <br />
+-boot menu=on <br />
+-drive file=debian_amd64.qcow2 <br />
+--vnc :0 <br />
 -cdrom ~/debian-12.7.0-amd64-netinst.iso
 </code></pre>
-<p>Adjust <code>hostfwd</code> as needed. Change the <code>debian_amd64.qcow2</code> to the real file name. Change the <code>debian-12.7.0-amd64-netinst.iso</code> to the real ISO path. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed. Change the numerical value after <code>--vnc :</code> to the port you want to use.\
+<p>Adjust <code>hostfwd</code> as needed. Change the <code>debian_amd64.qcow2</code> to the real file name. Change the <code>debian-12.7.0-amd64-netinst.iso</code> to the real ISO path. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed. Change the numerical value after <code>--vnc :</code> to the port you want to use.<br />
 Make it executable:</p>
 <pre><code>chmod +x install-qemu.sh
 </code></pre>
@@ -569,22 +569,22 @@ Make it executable:</p>
 <pre><code>nano qemu-cli.sh
 </code></pre>
 <p>Copy below command and paste to it:</p>
-<pre><code>qemu-system-x86_64 -machine q35 \
--drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd \
--m 2G \
--accel tcg,thread=multi \
--smp sockets=1,cores=4,threads=1 \
--cpu qemu64 \
--vga std \
--netdev user,id=n1,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 \
--device intel-hda \
--device usb-tablet \
--boot menu=on \
--drive file=debian_amd64.qcow2 \
--serial mon:stdio \
+<pre><code>qemu-system-x86_64 -machine q35 <br />
+-drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd <br />
+-m 2G <br />
+-accel tcg,thread=multi <br />
+-smp sockets=1,cores=4,threads=1 <br />
+-cpu qemu64 <br />
+-vga std <br />
+-netdev user,id=n1,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 <br />
+-device intel-hda <br />
+-device usb-tablet <br />
+-boot menu=on <br />
+-drive file=debian_amd64.qcow2 <br />
+-serial mon:stdio <br />
 -display none
 </code></pre>
-<p>Adjust <code>hostfwd</code> as needed. Change the <code>debian_amd64.qcow2</code> to the real file name. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed.\
+<p>Adjust <code>hostfwd</code> as needed. Change the <code>debian_amd64.qcow2</code> to the real file name. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed.<br />
 Make it executable:</p>
 <pre><code>chmod +x qemu-cli.sh
 </code></pre>
@@ -595,21 +595,21 @@ Make it executable:</p>
 <pre><code>nano qemu-gui.sh
 </code></pre>
 <p>Copy below command and paste to it:</p>
-<pre><code>qemu-system-x86_64 -machine q35 \
--drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd \
--m 2G \
--accel tcg,thread=multi \
--smp sockets=1,cores=4,threads=1 \
--cpu qemu64 \
--vga std \
--netdev user,id=n1,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 \
--device intel-hda \
--device usb-tablet \
--boot menu=on \
--drive file=debian_amd64.qcow2 \
+<pre><code>qemu-system-x86_64 -machine q35 <br />
+-drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd <br />
+-m 2G <br />
+-accel tcg,thread=multi <br />
+-smp sockets=1,cores=4,threads=1 <br />
+-cpu qemu64 <br />
+-vga std <br />
+-netdev user,id=n1,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 <br />
+-device intel-hda <br />
+-device usb-tablet <br />
+-boot menu=on <br />
+-drive file=debian_amd64.qcow2 <br />
 --vnc :0
 </code></pre>
-<p>Adjust <code>hostfwd</code> as needed. Change the <code>debian_amd64.qcow2</code> to the real file name. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed. Change the numerical value after <code>--vnc :</code> to the port you want to use.\
+<p>Adjust <code>hostfwd</code> as needed. Change the <code>debian_amd64.qcow2</code> to the real file name. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed. Change the numerical value after <code>--vnc :</code> to the port you want to use.<br />
 Make it executable:</p>
 <pre><code>chmod +x qemu-cli.sh
 </code></pre>
@@ -618,7 +618,7 @@ Make it executable:</p>
 </code></pre>
 <p>Connect to the VNC server from a VNC viewer.</p>
 <h3 id="qcow2imagemethod">QCOW2 Image Method</h3>
-<p>This method is more easy but less customizable.\
+<p>This method is more easy but less customizable.<br />
 It is recommended to get started with Ubuntu or Debian if you are overwhelmed by the options.</p>
 <h4 id="preparetheqcow2image">Prepare the QCOW2 Image</h4>
 <p>Prepare the qcow2 image. Here takes Debian AMD64 qcow2 cloud image for example. Change the URL to the download link of the qcow2 image you want or <code>cp</code> or <code>mv</code> the qcow2 image you want to the directory you want.</p>
@@ -628,15 +628,15 @@ It is recommended to get started with Ubuntu or Debian if you are overwhelmed by
 <pre><code>nano qemu-cli.sh
 </code></pre>
 <p>Copy below command and paste to it:</p>
-<pre><code>qemu-system-x86_64 -m 2G \
--drive file=debian-12-nocloud-amd64.qcow2,format=qcow2 \
--nographic \
--serial mon:stdio \
--display none \
--netdev user,id=net0,hostfwd=tcp::2222-:22 \
+<pre><code>qemu-system-x86_64 -m 2G <br />
+-drive file=debian-12-nocloud-amd64.qcow2,format=qcow2 <br />
+-nographic <br />
+-serial mon:stdio <br />
+-display none <br />
+-netdev user,id=net0,hostfwd=tcp::2222-:22 <br />
 -device e1000,netdev=net0
 </code></pre>
-<p>Change the <code>debian-12-nocloud-amd64.qcow2</code> to the real file name. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed. Adjust <code>hostfwd</code> as needed.\
+<p>Change the <code>debian-12-nocloud-amd64.qcow2</code> to the real file name. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed. Adjust <code>hostfwd</code> as needed.<br />
 Make it executable:</p>
 <pre><code>chmod +x qemu-cli.sh
 </code></pre>
@@ -647,13 +647,13 @@ Make it executable:</p>
 <pre><code>nano qemu-gui.sh
 </code></pre>
 <p>Copy below command and paste to it:</p>
-<pre><code>qemu-system-x86_64 -m 2G \
--drive file=debian-12-nocloud-amd64.qcow2,format=qcow2 \
+<pre><code>qemu-system-x86_64 -m 2G <br />
+-drive file=debian-12-nocloud-amd64.qcow2,format=qcow2 <br />
 -vnc :0
--netdev user,id=net0,hostfwd=tcp::2222-:22 \
+-netdev user,id=net0,hostfwd=tcp::2222-:22 <br />
 -device e1000,netdev=net0
 </code></pre>
-<p>Change <code>debian-12-nocloud-amd64.qcow2</code> to the real file name. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed. Change the numerical value after <code>--vnc :</code> to the port you want to use. Adjust <code>hostfwd</code> as needed.\
+<p>Change <code>debian-12-nocloud-amd64.qcow2</code> to the real file name. <code>20G</code> indicates 20GB disk image. You can adjust the size as needed. Change the numerical value after <code>--vnc :</code> to the port you want to use. Adjust <code>hostfwd</code> as needed.<br />
 Make it executable:</p>
 <pre><code>chmod +x qemu-cli.sh
 </code></pre>
@@ -669,17 +669,17 @@ Make it executable:</p>
 
 localhost login:
 </code></pre>
-<p>In the first time, type <code>root</code> and you will be logged in without a password. \
+<p>In the first time, type <code>root</code> and you will be logged in without a password. <br />
 You can set password latter by:</p>
 <pre><code>passwd
 </code></pre>
-<p>The password should be at least 4 letters long.\
+<p>The password should be at least 4 letters long.<br />
 If you don't want to set a password, just type <code>root</code> and you will be logged in without a password every time.</p>
 <h3 id="resizediskspace">Resize Disk Space</h3>
 <p>In <strong>Termux</strong> (outside VM), run:</p>
 <pre><code>qemu-img resize debian-12-nocloud-amd64.qcow2 +30G
 </code></pre>
-<p>Change <code>debian-12-nocloud-amd64.qcow2</code> to the real file name. <code>+20G</code> indicates increasing 20GB disk image. You can adjust the size as needed. \
+<p>Change <code>debian-12-nocloud-amd64.qcow2</code> to the real file name. <code>+20G</code> indicates increasing 20GB disk image. You can adjust the size as needed. <br />
 Inside VM, run:</p>
 <pre><code>sudo apt update
 sudo apt install parted e2fsprogs
@@ -807,7 +807,7 @@ sh rish
 <li>Turn off WiFi. <strong>Enable Wireless ADB</strong> will be turned off automatically by system settings. You can check that in <strong>SystemUI Tuner</strong>.</li>
 </ol>
 <h3 id="othersystemuitunerusage">Other SystemUI Tuner Usage</h3>
-<p><strong>SystemUI Tuner</strong> exposes some hidden options in Android. You can set them, add them to <strong>Persistent Options</strong> to keep them on, etc. Different manufacturers may remove or change these options, which SystemUI Tuner CANNOT work around.\
+<p><strong>SystemUI Tuner</strong> exposes some hidden options in Android. You can set them, add them to <strong>Persistent Options</strong> to keep them on, etc. Different manufacturers may remove or change these options, which SystemUI Tuner CANNOT work around.<br />
 You may need to run the following <code>adb shell</code> command (you can do it with <strong>Shizuku</strong> and a terminal such as <strong>Termux</strong> or <strong>aShell</strong>) in order to change the settings:</p>
 <pre><code>pm grant com.zacharee1.systemuituner android.permission.WRITE_SECURE_SETTINGS
 pm grant com.zacharee1.systemuituner android.permission.PACKAGE_USAGE_STATS
@@ -1093,20 +1093,20 @@ UseBridges 0
 <h3 id="installtorbrowser">Install Tor Browser</h3>
 <p>You can install <strong>Tor Browser</strong> from Google Play: <a href="https://play.google.com/store/apps/details?id=org.torproject.torbrowser">https://play.google.com/store/apps/details?id=org.torproject.torbrowser</a>.</p>
 <h3 id="introductionoftor">Introduction of Tor</h3>
-<p>Tor is a free overlay network for enabling anonymous communication. Built on free and open-source software and more than seven thousand volunteer-operated relays worldwide, users can have their Internet traffic routed via a random path through the network.\
-Using Tor makes it more difficult to trace a user's Internet activity by preventing any single point on the Internet (other than the user's device) from being able to view both where traffic originated from and where it is ultimately going to at the same time. This conceals a user's location and usage from anyone performing network surveillance or traffic analysis from any such point, protecting the user's freedom and ability to communicate confidentially.\
+<p>Tor is a free overlay network for enabling anonymous communication. Built on free and open-source software and more than seven thousand volunteer-operated relays worldwide, users can have their Internet traffic routed via a random path through the network.<br />
+Using Tor makes it more difficult to trace a user's Internet activity by preventing any single point on the Internet (other than the user's device) from being able to view both where traffic originated from and where it is ultimately going to at the same time. This conceals a user's location and usage from anyone performing network surveillance or traffic analysis from any such point, protecting the user's freedom and ability to communicate confidentially.<br />
 Key Features of Tor:</p>
 <ol>
 <li>Anonymity: Tor allows users to browse the internet anonymously by routing their internet traffic through a network of volunteer-operated servers called nodes or relays. Each relay only knows the IP address of the previous and next node, making it difficult to trace the origin of the traffic.</li>
 <li>Onion Routing: The name "Onion Router" comes from the way data is encrypted in layers, similar to the layers of an onion. When data is sent through the Tor network, it is encrypted multiple times, and each node decrypts a layer before passing it on to the next, protecting user privacy.</li>
 <li>Access to .onion Sites: Tor allows users to access hidden services with .onion domain names, which are not reachable through standard web browsers. These sites often provide additional privacy and anonymity.</li>
 <li>Bypass Censorship: Tor can help users bypass censorship and access restricted content by routing traffic through nodes in different countries.</li>
-<li>Privacy Tools: The Tor Browser, based on Mozilla Firefox, comes preconfigured with privacy enhancements, making it easier for users to maintain anonymity while browsing.\
+<li>Privacy Tools: The Tor Browser, based on Mozilla Firefox, comes preconfigured with privacy enhancements, making it easier for users to maintain anonymity while browsing.<br />
 The <strong>Tor Browser</strong> for Android is a mobile version of the Tor Browser that utilizes <strong>Mozilla Firefox</strong> for Android codebase.</li>
 </ol>
 <h3 id="noscriptsecuritysuite">NoScript Security Suite</h3>
-<p><strong>NoScript</strong> (or <strong>NoScript Security Suite</strong>) is a free and open-source extension for Firefox- and Chromium-based web browsers, written and maintained by Giorgio Maone, a software developer and member of the Mozilla Security Group.\
-By default, NoScript blocks active (executable) web content, which can be wholly or partially unblocked by allowlisting a site or domain from the extension's toolbar menu or by clicking a placeholder icon.\
+<p><strong>NoScript</strong> (or <strong>NoScript Security Suite</strong>) is a free and open-source extension for Firefox- and Chromium-based web browsers, written and maintained by Giorgio Maone, a software developer and member of the Mozilla Security Group.<br />
+By default, NoScript blocks active (executable) web content, which can be wholly or partially unblocked by allowlisting a site or domain from the extension's toolbar menu or by clicking a placeholder icon.<br />
 It is recommended to enable NoScript for all Tor sites unless you fully trust it.</p>
 <hr />
 <h2 id="opensslsecuresocketslayersslandtransportlayersecuritytlsprotocolsandcryptographylibraryimplementation">OpenSSL: Secure Sockets Layer (SSL) and Transport Layer Security (TLS) Protocols and Cryptography Library Implementation</h2>
@@ -1171,7 +1171,7 @@ RSA is employed in various applications that require secure communication and da
 <h4 id="allcommandoptionsofpkeyutl">All Command Options of Pkeyutl</h4>
 <pre><code>openssl pkeyutl [-help] [-in file] [-rawin] [-digest algorithm] [-out file] [-sigfile file] [-inkey filename|uri] [-keyform DER|PEM|P12|ENGINE] [-passin arg] [-peerkey file] [-peerform DER|PEM|P12|ENGINE] [-pubin] [-certin] [-rev] [-sign] [-verify] [-verifyrecover] [-encrypt] [-decrypt] [-derive] [-kdf algorithm] [-kdflen length] [-pkeyopt opt:value] [-pkeyopt_passin opt[:passarg]] [-hexdump] [-asn1parse] [-engine id] [-engine_impl] [-rand files] [-writerand file] [-provider name] [-provider-path path] [-propquery propq] [-config configfile]
 </code></pre>
-<p><strong>DESCRIPTION</strong>: This command can be used to perform low-level public key operations using any supported algorithm.\
+<p><strong>DESCRIPTION</strong>: This command can be used to perform low-level public key operations using any supported algorithm.<br />
 <strong>OPTIONS</strong>:</p>
 <ul>
 <li>-help: Print out a usage message.</li>
@@ -1251,7 +1251,7 @@ RSA is employed in various applications that require secure communication and da
 <h4 id="allcommandoptionsofenccipher">All Command Options of Enc / Cipher</h4>
 <pre><code>openssl enc|cipher [-cipher] [-help] [-list] [-ciphers] [-in filename] [-out filename] [-pass arg] [-e] [-d] [-a] [-base64] [-A] [-k password] [-kfile filename] [-K key] [-iv IV] [-S salt] [-salt] [-nosalt] [-z] [-md digest] [-iter count] [-pbkdf2] [-saltlen size] [-p] [-P] [-bufsize number] [-nopad] [-v] [-debug] [-none] [-engine id] [-rand files] [-writerand file] [-provider name] [-provider-path path] [-propquery propq]
 </code></pre>
-<p><strong>DESCRIPTION</strong>: The symmetric cipher commands allow data to be encrypted or decrypted using various block and stream ciphers using keys based on passwords or explicitly provided. Base64 encoding or decoding can also be performed either by itself or in addition to the encryption or decryption.\
+<p><strong>DESCRIPTION</strong>: The symmetric cipher commands allow data to be encrypted or decrypted using various block and stream ciphers using keys based on passwords or explicitly provided. Base64 encoding or decoding can also be performed either by itself or in addition to the encryption or decryption.<br />
 <strong>OPTIONS</strong>:</p>
 <ul>
 <li>-help: Print out a usage message.</li>
@@ -1557,9 +1557,9 @@ RSA is employed in various applications that require secure communication and da
 <hr />
 <h2 id="opensshwithlinuxortermuxandsftpservermountonmaterialfilessecureremoteaccess">OpenSSH with Linux or Termux and SFTP Server Mount on Material Files: Secure Remote Access</h2>
 <h3 id="introductionofsshandopenssh">Introduction of SSH and OpenSSH</h3>
-<p>SSH provides a secure way for accessing remote hosts and replaces tools such as telnet, rlogin, rsh, ftp. \
-OpenSSH (also known as OpenBSD Secure Shell) is a suite of secure networking utilities based on the Secure Shell (SSH) protocol, which provides a secure channel over an unsecured network in a client–server architecture.\
-Default SSH port in <strong>Termux</strong> is <code>8022</code>.\
+<p>SSH provides a secure way for accessing remote hosts and replaces tools such as telnet, rlogin, rsh, ftp. <br />
+OpenSSH (also known as OpenBSD Secure Shell) is a suite of secure networking utilities based on the Secure Shell (SSH) protocol, which provides a secure channel over an unsecured network in a client–server architecture.<br />
+Default SSH port in <strong>Termux</strong> is <code>8022</code>.<br />
 Default SSH port in Linux is usually <code>22</code>.</p>
 <h3 id="opensshserverinlinux">OpenSSH Server in Linux</h3>
 <h4 id="installandsetup">Install and Setup</h4>
@@ -1569,7 +1569,7 @@ sudo systemctl enable --now ssh
 <h4 id="editconfiguration">Edit Configuration</h4>
 <pre><code>sudo nano /etc/ssh/sshd_config
 </code></pre>
-<p>Edit as your need.\
+<p>Edit as your need.<br />
 If you're setting OpenSSH server for QEMU VM with same setup as this tutorial, namely, <code>hostfwd=tcp::2222-:22</code>, and you hope to connect it from outside of the VM (e.g. <strong>Termux</strong>), then you can edit the configuration as the following:</p>
 <pre><code>sudo rm /etc/ssh/sshd_config
 sudo nano /etc/ssh/sshd_config
@@ -1750,11 +1750,11 @@ ssh-keygen -t rsa -b 4096
 <h4 id="run">Run</h4>
 <pre><code>ssh root@localhost
 </code></pre>
-<p>Change the <code>root@localhost</code> to the actual user name and address. Port will be set as default.\
+<p>Change the <code>root@localhost</code> to the actual user name and address. Port will be set as default.<br />
 Run with port specified:</p>
 <pre><code>ssh root@localhost -p 2222
 </code></pre>
-<p>Change <code>2222</code> to the port of the server.\
+<p>Change <code>2222</code> to the port of the server.<br />
 If you're setting OpenSSH server for QEMU VM with same setup as this tutorial, namely, <code>hostfwd=tcp::2222-:22</code> and <code>Port 22</code>, then you can run:</p>
 <pre><code>ssh root@localhost -p 2222
 </code></pre>
@@ -1775,7 +1775,7 @@ If you're setting OpenSSH server for QEMU VM with same setup as this tutorial, n
 <li>Reboot.</li>
 </ul>
 <h3 id="scpsecurecopyprotocol">SCP (Secure Copy Protocol)</h3>
-<p>You can use <code>scp</code> on the client side to transfer files between the server side and the client side.\
+<p>You can use <code>scp</code> on the client side to transfer files between the server side and the client side.<br />
 The syntax of <code>scp</code> is the same as that of <code>cp</code>, but with the <code>username@host:</code> added before the path to copy to or from the server. For example:</p>
 <pre><code>scp -r root@localhost:/root/Desktop /data/data/com.termux/files/home/
 </code></pre>
