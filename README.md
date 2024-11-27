@@ -1,4 +1,5 @@
-[![Willie169](img/willie169.jpeg)](https://willie169.github.io) [![Android Non Root](img/Android_Non_Root.png)](https://willie169.github.io/Android-Non-Root) 
+<a href="https://willie169.github.io"><img src="img/willie169.jpeg" alt="Willie169" style="height: 40px;"></a>
+<a href="https://willie169.github.io/Android-Non-Root"><img src="img/Android_Non_Root.png" alt="Android Non Root" style="height: 40px;"></a>
 
 # Willie169.github.io
 
