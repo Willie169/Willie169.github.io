@@ -7,6 +7,8 @@
 
 * [Android Non Root](Willie169.github.io/Android-Non-Root)
 
+## Author Information
+
 The author of this website is [Willie169 (Willie Shen)](https://github.com/Willie169).
 
 If for whatever reason you want to send me money, here are where you may do so:
