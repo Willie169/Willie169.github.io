@@ -18,10 +18,6 @@
 	}
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 .navbar {
 	width: 100%;
 	background-color: #333;
@@ -82,24 +78,6 @@ button:hover {
   border: 1px solid #ccc;
   padding: 15px;
   margin-top: 20px;
-}
-
-#table-of-contents h2 {
-  font-size: 1.2em;
-}
-
-#toc-list li {
-  list-style: disc;
-  margin: 5px 0;
-}
-
-#toc-list li:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-#toc-list li.h3 {
-  margin-left: 20px;
 }
 
 #top {
