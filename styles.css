@@ -13,41 +13,28 @@ body {
     overflow: auto;
 }
 
+.markdown-body {
+	box-sizing: border-box;
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 45px;
+}
+
+@media (max-width: 767px) {
+	.markdown-body {
+		padding: 15px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #0d1117;
+	}
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: 'Roboto', sans-serif;
-	color: #007acc;
-	margin-bottom: 15px;
-}
-
-h1 {
-	font-size: 2rem;
-	border-bottom: 2px solid #007acc;
-	padding-bottom: 10px;
-}
-
-h2 {
-	font-size: 1.6rem;
-	border-bottom: 1px solid #007acc;
-	padding-bottom: 8px;
-}
-
-h3 {
-	font-size: 1.4rem;
-}
-
-h4,
-h5,
-h6 {
-    font-size: 1.2rem;
 }
 
 .navbar {
@@ -101,74 +88,10 @@ button:hover {
 	text-align: left;
 }
 
-a {
-	color: #007acc;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-ul,
-ol {
-	margin: 20px;
-	padding-left: 40px;
-}
-
-ul {
-	list-style-type: disc;
-}
-
-ol {
-	list-style-type: decimal;
-}
-
-li {
-	margin-bottom: 10px;
-	font-size: 1rem;
-}
-
 li::marker,
 #toc-list li::marker {
 	font-size: 1.2rem;
 	color: #007acc;
-}
-
-pre {
-    background-color: #e8e8e8;
-    border-radius: 3px solid #848484;
-    padding: 10px;
-    overflow-x: auto;
-    white-space: pre-wrap;
-    line-height: 1.5;
-}
-
-code {
-	background-color: #e8e8e8;
-	color: #d6336c;
-	padding: 2px 5px;
-	border-radius: 3px;
-	font-size: 1rem;
-	font-family: 'Fira Code', monospace;
-}
-
-pre code {
-  display: block;
-  background: none;
-  white-space: pre;
-  overflow-x: auto;
-  max-width: 100%;
-  min-width: 100px;
-  padding: 0;
-}
-
-li:hover {
-	background-color: #f0faff;
-}
-
-pre:hover {
-	background-color: #f8f8f8;
 }
 
 .container {
