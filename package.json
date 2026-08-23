@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "marked": "^18.0.10",
+    "marked-gfm-heading-id": "^4.1.4"
+  }
+}
