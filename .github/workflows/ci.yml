@@ -22,9 +22,9 @@ jobs:
         run: |
           git clone https://github.com/Willie169/Willie169.git
           cd Willie169
-          node generateGhPage.js
-          mv output.html ..
+          mv README.md ..
           cd ..
+          node generateGhPage.js
           rm -rf Willie169
       - name: Commit GitHub page
         run: |
