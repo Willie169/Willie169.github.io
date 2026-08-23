@@ -18,18 +18,19 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Clone Willie169
+      - name: generateGhPage
         run: |
           git clone https://github.com/Willie169/Willie169.git
           cd Willie169
-      - name: generateGhPage
-        run: node generateGhPage.js
+          node generateGhPage.js
+          mv output.html ..
+          cd ..
+          rm -rf Willie169
       - name: Commit GitHub page
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mv output.html index.html
-          mv index.html ..
           git add index.html
           if git diff --cached --quiet; then
             echo "No GitHub page changes"
