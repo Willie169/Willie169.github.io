@@ -20,7 +20,7 @@ jobs:
         run: npm ci
       - name: Clone Willie169
         run: |
-          git clone https://github.com/Willie169
+          git clone https://github.com/Willie169/Willie169.git
           cd Willie169
       - name: generateGhPage
         run: node generateGhPage.js
